@@ -135,8 +135,8 @@ def main():
             origin = patches[-1].origin
             dx = patches[-1].dx
             dy = patches[-1].dy
-            new_origin = [origin[0] + random.randint(0,int(nx/2))*dx,
-                          origin[1] + random.randint(0,int(ny/2))*dy]
+            new_origin = [origin[0] + random.randint(1,int(nx/2)-1)*dx,
+                          origin[1] + random.randint(1,int(ny/2)-1)*dy]
 
             print("Adding patch at level %i" % current_level)
             patches.append(gridPatch(patches[-1].id+1, current_level, dx0, dy0, new_origin))
